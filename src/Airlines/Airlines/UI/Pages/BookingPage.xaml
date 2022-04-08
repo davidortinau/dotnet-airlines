@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Airlines.BookingPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30">
+
+            <Image Source="plane.png" Aspect="AspectFill">
+                <!--<Image.Clip>
+                    <RoundRectangleGeometry
+                        CornerRadius="7"
+                        />
+                </Image.Clip>-->
+            </Image>
+            
+            <Label 
+                Text="Book Your Flight"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="30"
+                FontFamily="OpenSansSemiBold"
+                HorizontalOptions="Start" />
+            <Label 
+                Text="Where would you like to go?"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="16"
+                HorizontalOptions="Start" />
+
+            <Grid ColumnDefinitions="106,*"
+                  RowDefinitions="*,*"
+                  RowSpacing="8"
+                  >
+                <Border  Grid.Row="0" Grid.ColumnSpan="2" Stroke="#2F2F2F" StrokeThickness="1">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="7"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Padding="105,13,13,13" Spacing="8">
+                        <Label Text="From" TextColor="#282828">
+
+                        </Label>
+                        <Label Text="St. Louis, MO" 
+                           FontSize="21"
+                           FontFamily="OpenSansSemiBold"
+                           TextColor="#282828"/>
+
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Row="1" Grid.ColumnSpan="2" Stroke="#2F2F2F" StrokeThickness="1" HorizontalOptions="Fill">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="7"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Padding="105,13,13,13" Spacing="8">
+                        <Label Text="To" TextColor="#282828">
+
+                        </Label>
+                        <Label Text="Seattle, WA" 
+                           FontSize="21"
+                           FontFamily="OpenSansSemiBold"
+                           TextColor="#282828"/>
+
+                    </VerticalStackLayout>
+                </Border>
+
+                <ImageButton WidthRequest="64" HeightRequest="64"
+                        Background="{StaticResource BlueGradient}"
+                        Source="arrow_swap.png"
+                             Grid.RowSpan="2"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                        >
+                    <ImageButton.Clip>
+                        <EllipseGeometry RadiusX="32" RadiusY="32"
+                                         Center="32,32"/>
+                    </ImageButton.Clip>
+                </ImageButton>
+            </Grid>
+
+            
+
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="*,*"
+                  ColumnSpacing="8">
+                <Label Text="Passengers" FontSize="15"
+                       HorizontalOptions="Center"/>
+                <Label Text="Departure" FontSize="15"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       />
+                <Border 
+                    Grid.Row="1"
+                    Stroke="#2F2F2F" 
+                    StrokeThickness="1" HorizontalOptions="Fill">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="7"/>
+                    </Border.StrokeShape>
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Fill">
+                        <Button Text="-" VerticalOptions="Center"
+                                Background="Transparent"
+                                TextColor="#282828"/>
+                        <Label Text="2" 
+                           FontSize="17"
+                           FontFamily="OpenSansSemiBold"
+                           TextColor="#282828"
+                                VerticalOptions="Center"/>
+                        <Button Text="+" VerticalOptions="Center"
+                                Background="Transparent"
+                                TextColor="#282828"/>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Stroke="#2F2F2F" 
+                    StrokeThickness="1" HorizontalOptions="Fill">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="7"/>
+                    </Border.StrokeShape>
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Fill">
+                        <Label Text="14 Apr 2022" 
+                           FontSize="17"
+                           FontFamily="OpenSansSemiBold"
+                           TextColor="#282828"
+                               HorizontalTextAlignment="Center"
+                                VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </Border>
+
+            </Grid>
+
+            <Button Text="Find Flights"
+                HeightRequest="70"
+                FontSize="21"
+                FontFamily="OpenSansSemiBold"
+                Background="{StaticResource BlueGradient}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

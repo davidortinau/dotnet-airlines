@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Airlines.OnboardingPage"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout>
+        <Image Source="logo.png"
+               Margin="0,80,0,100"
+               HeightRequest="300"
+               WidthRequest="300"
+               HorizontalOptions="Center"/>
+        <Label Text="Find your flight"
+               FontSize="42"
+               FontFamily="OpenSansSemibold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        <Label Text="Now no need to worry if you want to go anywhere. Find lots of flight tickets to various destinations."
+               HorizontalTextAlignment="Center"
+               FontSize="16"
+               Margin="20,40"
+               />
+        <Button Text="Get Started"
+                HeightRequest="70"
+                Margin="40"
+                FontSize="21"
+                FontFamily="OpenSansSemiBold"
+                Clicked="Button_Clicked"
+                Background="{StaticResource BlueGradient}"
+                >
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>
